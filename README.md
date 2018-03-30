@@ -7,19 +7,20 @@ test plans.
 
 ## Installation
 
-Pre-requisite: 
-installation requires node > v6 
+
+Pre-requisite:
+installation requires node > v6
 
 To deploy ardere to your AWS account, you will need a fairly recent
 install of Node, then install the Node packages required:
 
     $ npm install
-    
+
 You will need to ensure your have AWS access and secret keys configured
 for serverless:
 
     $ sls config
-    
+
 To deploy the ardere lambda's and required AWS stack:
 
     $ sls deploy
@@ -45,7 +46,7 @@ Create a Python virtualenv, and install the test requirements:
 The tests can now be run with nose:
 
     $ nosetests
-   
+
 Note that **you cannot run the sls deploy while the virtualenv is active**
 due to how the serverless Python requirements plugin operates.
 
@@ -58,9 +59,9 @@ due to how the serverless Python requirements plugin operates.
    (mozilla-services use: "ardere-dev-ardere")
 4. Click on "New Execution" button
 5. Paste your json config into text area
-   (example: https://github.com/mozilla-services/screenshots-loadtests/blob/master/ardere.json)
+   (example:  [**mozilla-services/screenshots-loadtests** /ardere.json](https://github.com/mozilla-services/screenshots-loadtests/blob/master/ardere.json))
 6. Optional: Assign a name to your execution
 7. Click on "Start Execution"
-8. Monitor execution in Dashboard
+8. Monitor execution in AWS Dashboard
 9. Test load should be visible in DataDog, NewRelic, etc.
 
